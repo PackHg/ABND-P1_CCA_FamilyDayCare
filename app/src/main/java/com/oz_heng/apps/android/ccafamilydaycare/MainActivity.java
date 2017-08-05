@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* Set setOnClickListener on address TextView to launch a Web browser on the
+         * organisation location on Google Maps.
+         */
         TextView address = (TextView) findViewById(R.id.org_address);
         address.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Set setOnClickListener on webUrl TextView to launch a Web browser with the
+         * organisation web site.
+         */
         TextView webUrl = (TextView) findViewById(R.id.org_web_url);
         webUrl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Set setOnClickListener on email TextView to launch an email app with
+         * organisation email address in To: and "Enquiry" as subject.
+         */
         TextView email = (TextView) findViewById(R.id.org_email);
         email.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Set setOnClickListener on phone TextView to launch a phone call app with
+         * organisation phone number ready to call.
+         */
         TextView phone = (TextView) findViewById(R.id.org_call);
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,14 +68,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Open a Web browser at the url address.
+     *
+     * @param url a {@link String}
+     */
     private void openWebPage(String url) {
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        Uri webPage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
     }
 
+    /**
+     * Open an email app with the given address and subject.
+     *
+     * @param address a {@link String}
+     * @param subject a {@link String}
+     */
     private void composeEmail(String address, String subject) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setType("*/*");
@@ -74,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Open a phone call app with the given phoneNumber.
+     *
+     * @param phoneNumber a {@link String}
+     */
     private void dialPhoneNumber(String phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
