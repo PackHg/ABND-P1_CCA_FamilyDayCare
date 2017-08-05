@@ -8,19 +8,136 @@
     android:orientation="vertical"
     tools:context="com.oz_heng.apps.android.ccafamilydaycare.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_half"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/cca_fdc"/>
+            android:layout_marginRight="@dimen/activity_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cca_fdc" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:layout_marginBottom="@dimen/activity_margin_half"
+            android:text="@string/org_description"
+            android:textAppearance="?android:textAppearanceSmall" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_margin_half"
+        android:orientation="horizontal">
 
+        <ImageView
+            style="@style/PhotoStyle"
+            android:layout_marginEnd="@dimen/activity_margin_quarter"
+            android:layout_marginRight="@dimen/activity_margin_quarter"
+            android:src="@drawable/cca_photo1" />
+
+        <ImageView
+            style="@style/PhotoStyle"
+            android:layout_marginLeft="@dimen/activity_margin_quarter"
+            android:layout_marginStart="@dimen/activity_margin_quarter"
+            android:src="@drawable/cca_photo2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_margin_half"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/PhotoStyle"
+            android:layout_marginEnd="@dimen/activity_margin_quarter"
+            android:layout_marginRight="@dimen/activity_margin_quarter"
+            android:src="@drawable/cca_photo3" />
+
+        <ImageView
+            style="@style/PhotoStyle"
+            android:layout_marginLeft="@dimen/activity_margin_quarter"
+            android:layout_marginStart="@dimen/activity_margin_quarter"
+            android:src="@drawable/cca_photo4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IconStyle"
+            android:src="@drawable/ic_location_on"/>
+
+        <TextView
+            style="@style/InfoTextStyle"
+            android:text="@string/org_address"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IconStyle"
+            android:src="@drawable/ic_access_time"/>
+
+        <TextView
+            style="@style/InfoTextStyle"
+            android:text="@string/org_open_hours"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IconStyle"
+            android:src="@drawable/ic_call"/>
+
+        <TextView
+            style="@style/InfoTextStyle"
+            android:text="@string/org_phone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IconStyle"
+            android:src="@drawable/ic_earth"/>
+
+        <TextView
+            style="@style/InfoTextStyle"
+            android:text="@string/org_website"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IconStyle"
+            android:src="@drawable/ic_email"/>
+
+        <TextView
+            style="@style/InfoTextStyle"
+            android:text="@string/org_email"/>
+    </LinearLayout>
 
 </LinearLayout>
