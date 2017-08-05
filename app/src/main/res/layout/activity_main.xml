@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,133 +11,99 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_margin_half"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="@dimen/activity_margin"
-            android:scaleType="centerCrop"
-            android:src="@drawable/cca_fdc" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_margin_half"
-            android:text="@string/org_description"
-            android:textAppearance="?android:textAppearanceSmall" />
-    </LinearLayout>
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/activity_margin_half"
-        android:orientation="horizontal">
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cca_fdc" />
 
-        <ImageView
-            style="@style/PhotoStyle"
-            android:layout_marginEnd="@dimen/activity_margin_quarter"
-            android:layout_marginRight="@dimen/activity_margin_quarter"
-            android:src="@drawable/cca_photo1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin_half"
+                android:text="@string/org_description"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </LinearLayout>
 
-        <ImageView
-            style="@style/PhotoStyle"
-            android:layout_marginLeft="@dimen/activity_margin_quarter"
-            android:layout_marginStart="@dimen/activity_margin_quarter"
-            android:src="@drawable/cca_photo2" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_margin_half"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/activity_margin_half"
-        android:orientation="horizontal">
+            <ImageView
+                style="@style/PhotoStyle"
+                android:layout_marginEnd="@dimen/activity_margin_quarter"
+                android:layout_marginRight="@dimen/activity_margin_quarter"
+                android:src="@drawable/cca_photo1" />
 
-        <ImageView
-            style="@style/PhotoStyle"
-            android:layout_marginEnd="@dimen/activity_margin_quarter"
-            android:layout_marginRight="@dimen/activity_margin_quarter"
-            android:src="@drawable/cca_photo3" />
+            <ImageView
+                style="@style/PhotoStyle"
+                android:layout_marginLeft="@dimen/activity_margin_quarter"
+                android:layout_marginStart="@dimen/activity_margin_quarter"
+                android:src="@drawable/cca_photo2" />
+        </LinearLayout>
 
-        <ImageView
-            style="@style/PhotoStyle"
-            android:layout_marginLeft="@dimen/activity_margin_quarter"
-            android:layout_marginStart="@dimen/activity_margin_quarter"
-            android:src="@drawable/cca_photo4" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_margin_half"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <ImageView
+                style="@style/PhotoStyle"
+                android:layout_marginEnd="@dimen/activity_margin_quarter"
+                android:layout_marginRight="@dimen/activity_margin_quarter"
+                android:src="@drawable/cca_photo3" />
 
-        <ImageView
-            style="@style/IconStyle"
-            android:src="@drawable/ic_location_on"/>
+            <ImageView
+                style="@style/PhotoStyle"
+                android:layout_marginLeft="@dimen/activity_margin_quarter"
+                android:layout_marginStart="@dimen/activity_margin_quarter"
+                android:src="@drawable/cca_photo4" />
+        </LinearLayout>
 
         <TextView
             style="@style/InfoTextStyle"
+            android:drawableLeft="@drawable/ic_location_on"
+            android:drawableStart="@drawable/ic_location_on"
             android:text="@string/org_address"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/IconStyle"
-            android:src="@drawable/ic_access_time"/>
 
         <TextView
             style="@style/InfoTextStyle"
+            android:drawableLeft="@drawable/ic_access_time"
+            android:drawableStart="@drawable/ic_access_time"
             android:text="@string/org_open_hours"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/IconStyle"
-            android:src="@drawable/ic_call"/>
 
         <TextView
             style="@style/InfoTextStyle"
+            android:drawableLeft="@drawable/ic_call"
+            android:drawableStart="@drawable/ic_call"
             android:text="@string/org_phone"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/IconStyle"
-            android:src="@drawable/ic_earth"/>
 
         <TextView
             style="@style/InfoTextStyle"
-            android:text="@string/org_website"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            style="@style/IconStyle"
-            android:src="@drawable/ic_email"/>
-
-        <TextView
-            style="@style/InfoTextStyle"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableStart="@drawable/ic_email"
             android:text="@string/org_email"/>
-    </LinearLayout>
 
-</LinearLayout>
+        <TextView
+            style="@style/InfoTextStyle"
+            android:drawableLeft="@drawable/ic_earth"
+            android:drawableStart="@drawable/ic_earth"
+            android:text="@string/org_website"/>
+
+    </LinearLayout>
+</ScrollView>
