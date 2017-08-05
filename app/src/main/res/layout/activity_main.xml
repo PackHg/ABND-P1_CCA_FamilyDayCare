@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/activity_margin_half"
+            android:layout_marginBottom="@dimen/activity_margin"
             android:orientation="horizontal">
 
             <ImageView
@@ -76,6 +76,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/org_address"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_location_on"
             android:drawableStart="@drawable/ic_location_on"
@@ -88,18 +89,21 @@
             android:text="@string/org_open_hours"/>
 
         <TextView
+            android:id="@+id/org_call"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_call"
             android:drawableStart="@drawable/ic_call"
             android:text="@string/org_phone"/>
 
         <TextView
+            android:id="@+id/org_email"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_email"
             android:drawableStart="@drawable/ic_email"
             android:text="@string/org_email"/>
 
         <TextView
+            android:id="@+id/org_web_url"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_earth"
             android:drawableStart="@drawable/ic_earth"
