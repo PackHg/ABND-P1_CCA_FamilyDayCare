@@ -10,8 +10,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // Url of CCA FDC
-    private final String CCA_FDC_URL ="http://www.ccasfdc.org.au/";
-
+    private final String CCA_FDC_URL = "http://www.ccasfdc.org.au/";
+    // CCA FDC email address
+    private final String CCA_FDC_EMAIL_ADDRESS = "fdc@ccas.org.au";
     // Url of CCA FDC on Google Maps
     private final String CCA_FDC_ON_GOOGLE_MAPS = "https://www.google.com.au/maps/place/2+Dickson+Ave,+West+Ryde+NSW+2114/@-33.8062937,151.086607,17z/data=!4m13!1m7!3m6!1s0x6b12a44e1f2ed9b3:0xad57bc445457c27!2s2+Dickson+Ave,+West+Ryde+NSW+2114!3b1!8m2!3d-33.8065383!4d151.0865966!3m4!1s0x6b12a44e1f2ed9b3:0xad57bc445457c27!8m2!3d-33.8065383!4d151.0865966";
 
@@ -20,19 +21,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView addressTextView = (TextView) findViewById(R.id.org_address);
-        addressTextView.setOnClickListener(new View.OnClickListener() {
+        TextView address = (TextView) findViewById(R.id.org_address);
+        address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openWebPage(CCA_FDC_ON_GOOGLE_MAPS);
             }
         });
 
-        TextView webUrlTextView = (TextView) findViewById(R.id.org_web_url);
-        webUrlTextView.setOnClickListener(new View.OnClickListener() {
+        TextView webUrl = (TextView) findViewById(R.id.org_web_url);
+        webUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openWebPage(CCA_FDC_URL);
+            }
+        });
+
+        TextView email = (TextView) findViewById(R.id.org_email);
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                composeEmail(CCA_FDC_EMAIL_ADDRESS, "Enquiry");
             }
         });
     }
@@ -44,4 +53,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    private void composeEmail(String address, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setType("*/*");
+        intent.setData(Uri.parse("mailto:" + address)); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
+
+
+
