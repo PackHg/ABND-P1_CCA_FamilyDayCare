@@ -45,17 +45,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /* Set setOnClickListener on email TextView to launch an email app with
-         * organisation email address in To: and "Enquiry" as subject.
-         */
-        TextView email = (TextView) findViewById(R.id.org_email);
-        email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                composeEmail(CCA_FDC_EMAIL_ADDRESS, "Enquiry");
-            }
-        });
-
         /* Set setOnClickListener on phone TextView to launch a phone call app with
          * organisation phone number ready to call.
          */
@@ -81,22 +70,6 @@ public class MainActivity extends AppCompatActivity {
     private void openWebPage(String url) {
         Uri webPage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
-    }
-
-    /**
-     * Open an email app with the given address and subject.
-     *
-     * @param address a {@link String}
-     * @param subject a {@link String}
-     */
-    private void composeEmail(String address, String subject) {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setType("*/*");
-        intent.setData(Uri.parse("mailto:" + address)); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

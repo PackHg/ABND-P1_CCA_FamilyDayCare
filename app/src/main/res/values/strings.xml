@@ -8,7 +8,6 @@
     <string name="org_address">2 Dickson Avenue, West Ryde NSW 2112</string>
 
     <!-- Organisation phone number -->
-    <string name="Phone">Phone:</string>
     <string name="org_phone">(02) 9874 0066</string>
 
     <!-- Organisation email -->

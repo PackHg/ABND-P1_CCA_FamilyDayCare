@@ -95,12 +95,13 @@
             android:drawableStart="@drawable/ic_earth"
             android:text="@string/org_website"/>
 
+        <!-- Organisation email -->
         <TextView
-            android:id="@+id/org_email"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_email"
             android:drawableStart="@drawable/ic_email"
-            android:text="@string/org_email"/>
+            android:text="@string/org_email"
+            android:autoLink="email"/>
 
         <TextView
             android:id="@+id/org_call"
