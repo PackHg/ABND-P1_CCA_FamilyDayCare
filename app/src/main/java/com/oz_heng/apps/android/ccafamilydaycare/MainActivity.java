@@ -68,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+     * The following helper methods are from
+     * https://developer.android.com/guide/components/intents-common.html
+     */
+
     /**
      * Open a Web browser at the url address.
      *

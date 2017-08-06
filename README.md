@@ -7,5 +7,4 @@ Tested with:
 * Hardware Device: Samsung SM-G935F (Android 7.0, API 24)
 * Virtual device: Nexus SX API 25
 
-Pack Heng
-pack@oz-heng.com
+Pack Heng, pack@oz-heng.com
