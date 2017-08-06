@@ -44,17 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 openWebPage(CCA_FDC_URL);
             }
         });
-
-        /* Set setOnClickListener on phone TextView to launch a phone call app with
-         * organisation phone number ready to call.
-         */
-        TextView phone = (TextView) findViewById(R.id.org_call);
-        phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialPhoneNumber(CCA_FDC_PHONE_NUMBER);
-            }
-        });
     }
 
     /*
@@ -70,19 +59,6 @@ public class MainActivity extends AppCompatActivity {
     private void openWebPage(String url) {
         Uri webPage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
-    }
-
-    /**
-     * Open a phone call app with the given phoneNumber.
-     *
-     * @param phoneNumber a {@link String}
-     */
-    private void dialPhoneNumber(String phoneNumber) {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + phoneNumber));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }

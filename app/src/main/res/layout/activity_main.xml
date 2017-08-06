@@ -103,12 +103,13 @@
             android:text="@string/org_email"
             android:autoLink="email"/>
 
+        <!-- Organsiation phone -->
         <TextView
-            android:id="@+id/org_call"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_call"
             android:drawableStart="@drawable/ic_call"
-            android:text="@string/org_phone"/>
+            android:text="@string/org_phone"
+            android:autoLink="phone"/>
 
     </LinearLayout>
 </ScrollView>
