@@ -5,10 +5,10 @@
     <string name="org_description">Christian Community Aid (CCA) Family Day Care offers families flexible, affordable care options for children aged birth to 12 years</string>
 
     <!-- Organisation address -->
-    <string name="org_address">2 Dickson Avenue, West Ryde NSW 2112</string>
+    <string name="org_address">2 Dickson Avenue, West Ryde NSW 2112, Australia</string>
 
     <!-- Organisation phone number -->
-    <string name="org_phone">+61 2 98740066</string>
+    <string name="org_phone">+61 2 9874 0066</string>
 
     <!-- Organisation email -->
     <string name="org_email">fdc@ccas.org.au</string>
@@ -17,6 +17,6 @@
     <string name="org_open_hours">Monday to Friday 8.30am - 4.30am</string>
 
     <!-- Organisation web site -->
-    <string name="org_website">http://www.ccasfdc.org.au/</string>
+    <string name="org_website">www.ccasfdc.org.au</string>
 
 </resources>

@@ -9,14 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Url of CCA FDC
-    private final String CCA_FDC_URL = "http://www.ccasfdc.org.au/";
-    // CCA FDC email address
-    private final String CCA_FDC_EMAIL_ADDRESS = "fdc@ccas.org.au";
-    // Url of CCA FDC on Google Maps
     private final String CCA_FDC_ON_GOOGLE_MAPS = "https://www.google.com.au/maps/place/2+Dickson+Ave,+West+Ryde+NSW+2114/@-33.8062937,151.086607,17z/data=!4m13!1m7!3m6!1s0x6b12a44e1f2ed9b3:0xad57bc445457c27!2s2+Dickson+Ave,+West+Ryde+NSW+2114!3b1!8m2!3d-33.8065383!4d151.0865966!3m4!1s0x6b12a44e1f2ed9b3:0xad57bc445457c27!8m2!3d-33.8065383!4d151.0865966";
-    // CCA FDC phone number
-    private final String CCA_FDC_PHONE_NUMBER = "+61298740066";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +26,10 @@ public class MainActivity extends AppCompatActivity {
                 openWebPage(CCA_FDC_ON_GOOGLE_MAPS);
             }
         });
-
-        /* Set setOnClickListener on webUrl TextView to launch a Web browser with the
-         * organisation web site.
-         */
-        TextView webUrl = (TextView) findViewById(R.id.org_web_url);
-        webUrl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openWebPage(CCA_FDC_URL);
-            }
-        });
     }
 
     /*
-     * The following helper methods are from
+     * The following helper method is from
      * https://developer.android.com/guide/components/intents-common.html
      */
 

@@ -75,41 +75,44 @@
                 android:src="@drawable/cca_photo4" />
         </LinearLayout>
 
+        <!-- Organisation address -->
         <TextView
             android:id="@+id/org_address"
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_location_on"
             android:drawableStart="@drawable/ic_location_on"
-            android:text="@string/org_address"/>
+            android:text="@string/org_address" />
 
+        <!-- Organisation opening hours -->
         <TextView
             style="@style/InfoTextStyle"
             android:drawableLeft="@drawable/ic_access_time"
             android:drawableStart="@drawable/ic_access_time"
-            android:text="@string/org_open_hours"/>
+            android:text="@string/org_open_hours" />
 
+        <!-- Organisation web site -->
         <TextView
-            android:id="@+id/org_web_url"
             style="@style/InfoTextStyle"
+            android:autoLink="web"
             android:drawableLeft="@drawable/ic_earth"
             android:drawableStart="@drawable/ic_earth"
-            android:text="@string/org_website"/>
+            android:text="@string/org_website" />
 
         <!-- Organisation email -->
         <TextView
             style="@style/InfoTextStyle"
+            android:autoLink="email"
             android:drawableLeft="@drawable/ic_email"
             android:drawableStart="@drawable/ic_email"
-            android:text="@string/org_email"
-            android:autoLink="email"/>
+            android:text="@string/org_email" />
 
-        <!-- Organsiation phone -->
+        <!-- Organisation phone -->
         <TextView
             style="@style/InfoTextStyle"
+            android:autoLink="phone"
             android:drawableLeft="@drawable/ic_call"
             android:drawableStart="@drawable/ic_call"
-            android:text="@string/org_phone"
-            android:autoLink="phone"/>
+            android:text="@string/org_phone" />
 
     </LinearLayout>
 </ScrollView>
